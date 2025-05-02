@@ -10,7 +10,8 @@ public class DocComments {
         double bmi = calculateBodyMassIndex(1.55, 44.50);
         System.out.println(bmi);
 
-        //Ejecuta el nuevo método 
+        //Ejecuta el nuevo método
+        System.out.println(BMI(bmi));
     }
 
     /**
@@ -41,11 +42,11 @@ public class DocComments {
 
     /**
      * Function name: calculateBodyMassIndex
-     * 
+     *
      * @param height (double)
      * @param weight (double)
      * @return (double)
-     * 
+     *
      * Inside the function:
      * 1. calculates the weight in kilograms by the squared height in meters and return it.
      */
@@ -56,7 +57,7 @@ public class DocComments {
     }
 
     //Escribe una función que con el índice de masa corporal devuelva un String con los resultados y documéntala:
-    
+
     /* Clasificación índice de masa corportal rango - kg/m2
     Delgadez severa	< 16
     Delgadez moderada	16 - 17
@@ -66,6 +67,38 @@ public class DocComments {
     Obeso Clase I	30 - 35
     Obeso Clase II	35 - 40
     Obeso Clase III	> 40 */
+
+
+    /**
+     * Function name: BMI (body mass index)
+     *
+     * @param bmi
+     * @return String
+     *
+     * Inside the function:
+     * Find the category corresponding to your BMI value:
+     * "Underweight," "Normal," "Overweight," or "Obese."
+     */
+    public static String BMI (double bmi){
+        if( bmi < 16){
+            return "Severely thin";
+        } else if ( bmi >= 16 && bmi <= 17) {
+            return "Moderately thin";
+        } else if ( bmi > 17 && bmi <= 18.5) {
+            return "Mildly thin";
+        } else if ( bmi > 18.5 && bmi <=25) {
+            return "Normal";
+        } else if ( bmi > 25 && bmi <= 30) {
+            return "Overweight";
+        } else if ( bmi > 30 && bmi <= 35) {
+            return "Class I obese";
+        } else if ( bmi > 35 && bmi <= 40) {
+            return "Class II obese";
+        } else {
+            return "Class III obese";
+        }
+    }
+
 
 
 
